@@ -84,7 +84,7 @@ module.exports.performDelete = (req, res, next) => {
             res.end(err);
         }
         else {
-            res.json({success: true, msg: 'Successfully Deleeted Contact'});
+            res.json({success: true, msg: 'Successfully Deleted Contact'});
         }
     });
 }
