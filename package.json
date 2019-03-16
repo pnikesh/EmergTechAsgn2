@@ -1,5 +1,5 @@
 {
-  "name": "comp308-w2019-lesson8b",
+  "name": "comp308-w2019-lesson9b",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -48,10 +48,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CentennialCollege/COMP308-W2019-Lesson8B.git"
+    "url": "git+https://github.com/CentennialCollege/COMP308-W2019-Lesson9B.git"
   },
   "bugs": {
-    "url": "https://github.com/CentennialCollege/COMP308-W2019-Lesson8B/issues"
+    "url": "https://github.com/CentennialCollege/COMP308-W2019-Lesson9B/issues"
   },
-  "homepage": "https://github.com/CentennialCollege/COMP308-W2019-Lesson8B#readme"
+  "homepage": "https://github.com/CentennialCollege/COMP308-W2019-Lesson9B#readme"
 }
