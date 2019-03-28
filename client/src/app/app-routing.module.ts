@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 // Components
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
-import { ProductsComponent } from './pages/products/products.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
@@ -15,13 +15,17 @@ import { ContactDeleteComponent } from './contacts/contact-delete/contact-delete
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
+import { ContactMeComponent } from './pages/contact-me/contact-me.component';
+
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent, data: {title: 'Home'}},
   {path: 'about', component: AboutComponent, data: {title: 'About'}},
-  {path: 'products', component: ProductsComponent, data: {title: 'Products'}},
+  {path: 'projects', component: ProjectsComponent, data: {title: 'Projects'}},
   {path: 'services', component: ServicesComponent, data: {title: 'Services'}},
   {path: 'contact', component: ContactComponent, data: {title: 'Contact'}},
+  {path: 'contact-me', component: ContactMeComponent, data: {title: 'Contact'}},
+
 
   {path: 'contact/contact-list', component: ContactListComponent, data: {title: 'Contact List'}, canActivate: [AuthGuard]},
   {path: 'contact/contact-list/add', component: ContactDetailsComponent, data: {title: 'Add Contact'}, canActivate: [AuthGuard]},
