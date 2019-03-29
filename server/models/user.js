@@ -1,3 +1,8 @@
+/*
+ models/cusers.js
+ Nikesh Patel
+ 300970071
+Mar 28, 2019 */
 // require modules for our User Model
 let mongoose = require("mongoose");
 let passportLocalMongoose = require("passport-local-mongoose");
