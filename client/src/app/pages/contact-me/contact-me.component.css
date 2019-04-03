@@ -5,6 +5,16 @@ form {
   margin-bottom: 50px;
 
 }
+
+.button {
+  background-color: black;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 .contactCont {
   margin-top: 20px;
   margin: auto;

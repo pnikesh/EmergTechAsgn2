@@ -16,6 +16,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { ContactMeComponent } from './pages/contact-me/contact-me.component';
+import { MessagesComponent } from './pages/messages/messages.component';
+import { MessageDeleteComponent } from './message-delete/message-delete.component';
 
 
 const routes: Routes = [
@@ -25,12 +27,15 @@ const routes: Routes = [
   {path: 'services', component: ServicesComponent, data: {title: 'Services'}},
   {path: 'contact', component: ContactComponent, data: {title: 'Contact'}},
   {path: 'contact-me', component: ContactMeComponent, data: {title: 'Contact'}},
+  {path: 'message', component: MessagesComponent, data: {title: 'Messages'}},
+  {path: 'message-delete', component: MessageDeleteComponent, data: {title: 'Message Delete'}},
 
 
   {path: 'contact/contact-list', component: ContactListComponent, data: {title: 'Contact List'}, canActivate: [AuthGuard]},
   {path: 'contact/contact-list/add', component: ContactDetailsComponent, data: {title: 'Add Contact'}, canActivate: [AuthGuard]},
   {path: 'contact/contact-list/edit/:id', component: ContactDetailsComponent, data: {title: 'Edit Contact'}, canActivate: [AuthGuard]},
   {path: 'contact/contact-list/delete/:id', component: ContactDeleteComponent, data: {title: 'Add Contact'}, canActivate: [AuthGuard]},
+  {path: 'message/delete/:id', component: MessageDeleteComponent, data: {title: 'Delete Message'}, canActivate: [AuthGuard]},
 
   {path: 'register', component: RegisterComponent, data: {title: 'Register'}},
   {path: 'login', component: LoginComponent, data: {title: 'Register'}},

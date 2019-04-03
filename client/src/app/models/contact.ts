@@ -5,7 +5,7 @@
 Mar 28, 2019  */
 export class Contact {
   // tslint:disable-next-line:variable-name
-  _id: string;
+  _id: String;
   firstName: string;
   lastName: string;
   age: number;

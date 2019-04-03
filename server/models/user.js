@@ -1,5 +1,5 @@
 /*
- models/cusers.js
+ models/users.js
  Nikesh Patel
  300970071
 Mar 28, 2019 */

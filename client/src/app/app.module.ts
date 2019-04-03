@@ -30,6 +30,8 @@ import { JwtModule, JwtHelperService, JwtInterceptor } from '@auth0/angular-jwt'
 
 // Route Guards
 import { AuthGuard } from './guards/auth.guard';
+import { MessagesComponent } from './pages/messages/messages.component';
+import { MessageDeleteComponent } from './message-delete/message-delete.component';
 
 
 
@@ -55,7 +57,9 @@ export function jwtTokenGetter() {
     ContactDetailsComponent,
     ContactDeleteComponent,
     ContactMeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    MessagesComponent,
+    MessageDeleteComponent
   ],
   imports: [
     BrowserModule,

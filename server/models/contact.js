@@ -12,7 +12,7 @@ let contactSchema = mongoose.Schema({
     age: Number
 },
 {
-    collection: "first"
+    collection: "second"
 });
 
 module.exports = mongoose.model('contact', contactSchema);

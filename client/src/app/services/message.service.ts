@@ -1,21 +1,23 @@
+
+import { Message } from './../models/message';
+
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { Contact } from '../models/contact';
 import { User } from '../models/user';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class ContactListService {
+export class MessageService {
   private user: User;
   private authToken: any = null;
 
-  //private endpoint = 'https://comp308-asgn2.herokuapp.com/api/contact-list/';
+  // private endpoint = 'https://comp308-w2019-lesson10b.herokuapp.com/api/contact-list/';
 
-  private endpoint = 'http://localhost:3000/api/contact-list/';
+  private endpoint = 'http://localhost:3000/api/message/';
 
   private httpOptions = {
     headers: new HttpHeaders({
@@ -34,24 +36,16 @@ export class ContactListService {
     return this.http.get<any>(this.endpoint, this.httpOptions);
   }
 
-  public getContact(contact: Contact): Observable<any> {
+
+  public addMessage(message: Message): Observable<any> {
     this.loadToken();
-    return this.http.get<any>(this.endpoint + 'edit/' + contact._id, this.httpOptions);
+    return this.http.post<any>(this.endpoint + 'add', message, this.httpOptions);
   }
 
-  public addContact(contact: Contact): Observable<any> {
-    this.loadToken();
-    return this.http.post<any>(this.endpoint + 'add', contact, this.httpOptions);
-  }
 
-  public editContact(contact: Contact): Observable<any> {
+  public deleteMessage(message: Message): Observable<any> {
     this.loadToken();
-    return this.http.post<any>(this.endpoint + 'edit/' + contact._id, contact, this.httpOptions);
-  }
-
-  public deleteContact(contact: Contact): Observable<any> {
-    this.loadToken();
-    return this.http.get<any>(this.endpoint + 'delete/' + contact._id, this.httpOptions);
+    return this.http.get<any>(this.endpoint + 'delete/' + message._id, this.httpOptions);
   }
 
   private loadToken() {
