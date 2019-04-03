@@ -15,9 +15,9 @@ export class MessageService {
   private user: User;
   private authToken: any = null;
 
-  // private endpoint = 'https://comp308-w2019-lesson10b.herokuapp.com/api/contact-list/';
+  private endpoint = 'https://comp308-w2019-lesson10b.herokuapp.com/api/message/';
 
-  private endpoint = 'http://localhost:3000/api/message/';
+  //private endpoint = 'http://localhost:3000/api/message/';
 
   private httpOptions = {
     headers: new HttpHeaders({
